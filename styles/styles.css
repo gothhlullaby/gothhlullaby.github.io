@@ -1,7 +1,151 @@
-h1 {
-    color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h2 {
-    color: #a63b3b;
+.body {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    background-color: #fff;
 }
+
+
+.page-header {
+    width: 100%;
+    max-width: 1920px;      
+    height: 147px;
+    padding: 0 20px;        
+    margin: 0 auto;         
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(222, 222, 222, 0.5);
+    align-items: center;
+    border-bottom: 2px solid #eee; 
+}
+
+.page-header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.page-header__nav {
+    display: flex;
+    gap: 50px;
+}
+
+.page-header__nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.page-header__user-link {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;     
+    border: 2px solid #000000;
+    border-radius: 0;       
+}
+
+/* ГЛАВНЫЙ ЗАГОЛОВОК */
+.main-header {
+    color: black;
+    max-width: 990px;       
+    margin: 100px auto 80px; 
+    padding: 40px 20px;     
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 45px;
+    line-height: 58px;
+    margin-bottom: 30px;
+}
+
+.main-header p {
+    font-size: 20px;        
+    font-weight: 400;
+    line-height: 1.5;       
+    margin-top: 30px;
+}
+
+.offers {
+    max-width: 1200px;      
+    margin: 0 auto 80px;    
+    padding: 40px 20px;     
+    text-align: center;
+}
+
+.offers__title {
+    font-size: 24px;
+    margin-bottom: 30px;    
+}
+
+.offers__btns {
+    display: flex;
+    justify-content: center;
+    gap: 30px;             
+}
+
+.btn {
+    padding: 15px 30px;     
+    border: 2px solid black;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn--red {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: #fff;
+}
+
+.about,
+.upcoming,
+.listing,
+.contacts {
+    max-width: 624px;       
+    width: 624px;           
+    height: 62px;           
+    margin: 200px auto 150px; 
+    padding: 40px 20px;     
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;  
+    text-align: center;
+    margin: 0;              
+}
+
+.page-footer {
+    max-width: 1337px;      
+    height: 320px;          
+    padding: 60px 40px;     
+    margin: 0 auto;         
+    border-top: 1px solid #eee;
+    background-color: #f8f8f8;
+    text-align: left;
+}
+
+.page-footer__nav-link {
+    display: block;
+    text-decoration: none;
+    color: #333;            
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 12px 0 12px 40px; /* Внутренние отступы */
+    margin-bottom: 10px;   
+}
+
