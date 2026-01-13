@@ -7,24 +7,119 @@
     @@include('blocks/page-header.html')
     
     <main class="main">
-      <!-- Здесь будут хлебные крошки -->
 
       <article class="event">
-        <!-- Здесь пропущенное содержимое страницы -->
+          <div class="event__content content">
+            <h5>Программа мероприятия</h5>
+            <ul>
+              <li>20:15 — Приветствие гостей</li>
+              <li>20:30 — Первая подача блюд | Салаты</li>
+              <li>20:40 — Живой вокал | Композиции 1-3</li>
+              <li>21:20 — Подача горячих блюд</li>
+              <li>21:30 — Живой вокал | Композиции 4-7</li>
+              <li>22:15 — Подача десерта</li>
+              <li>22:30 — Живой вокал | Композиции 8-9</li>
+              <li>23:00 — Завершение вечера</li>
+            </ul>
+            <h5>The Best Of Sade</h5>
+            <p>Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые популярные хиты группы, раритеты и их любимые треки.</p>
+
+            <p>Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры. Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав более 2 миллионов копий в Европе.</p>
+            <ol>
+              <li>Your Love Is King</li>
+              <li>On To Your Love</li>
+              <li>Smooth Operator</li>
+              <li>Jezebel</li>
+              <li>The Sweetest Taboo</li>
+              <li>Is It A Crime</li>
+              <li>Never As Good As The First Time</li>
+              <li>Love Is Stronger Than Pride</li>
+              <li>Paradise</li> 
+            </ol>
+          </div>
 
         <form class="reserve event__reserve">
           <div class="reserve__checks">
-            Чекбоксы
-          </div>
+            <h3 class="reserve__title">Забронировать столик</h3>
+    
+            <div class="reserve__check-grid">
+              @@loop('blocks/checkbox.html', [
+                {"number": "1", "color": "red", "checked": ""},
+                {"number": "2", "color": "black", "checked": ""},
+                {"number": "3", "color": "black", "checked": ""},
+                {"number": "4", "color": "red", "checked": ""},
+                {"number": "5", "color": "gray", "checked": "checked"},
+                {"number": "6", "color": "black", "checked": ""},
+                {"number": "7", "color": "red", "checked": ""},
+                {"number": "8", "color": "red", "checked": ""},
+                {"number": "9", "color": "red", "checked": ""},
+                {"number": "10", "color": "black", "checked": ""},
+                {"number": "11", "color": "black", "checked": ""}
+              ])
+            </div>
+         </div>
           <div class="reserve__scheme">
-            Схема столов
+           <div class="reserve__schema-container">
+            <div class="reserve__stage">Сцена</div>
+            <img src="assets/images/schema.svg" alt="Схема расположения столов" class="reserve__schema-img">
+            </div>
           </div>
+
           <div class="reserve__order">
-            Оформление заказа
+            <h3 class="reserve__order-heading">Ваши пригласительные билеты</h3>
+  
+            <div class="reserve__order-list">
+              <div class="reserve__order-line">
+                <span class="reserve__order-details">9 шт. | 1400 ₽</span>
+                <span class="reserve__order-sum">12 600 ₽</span>
+              </div>
+  
+              <div class="reserve__order-line">
+                <span class="reserve__order-details">4 шт. | 1250 ₽</span>
+                <span class="reserve__order-sum">5000 ₽</span>
+              </div>
+  
+              <div class="reserve__order-total">
+                <span class="reserve__order-total-label">Сумма 17 600 ₽</span>
+              </div>
+            </div>
+  
+            <button class="reserve__order-btn">Купить билеты</button>
           </div>
+
           <div class="reserve__legend">
-            Легенда
+            <h4 class="reserve__legend-title">Стоимость пригласительного билета</h4>
+  
+            <div class="reserve__legend-items">
+              <div class="reserve__legend-item">
+                <div class="reserve__legend-square reserve__legend-square--red"></div>
+                <span class="reserve__legend-text">1400 ₽ | 1 персона</span>
+              </div>
+  
+              <div class="reserve__legend-item">
+                <div class="reserve__legend-square reserve__legend-square--black"></div>
+                <span class="reserve__legend-text">1250 ₽ | 1 персона</span>
+              </div>
+            </div>
+  
+            <div class="reserve__legend-notes">
+              <h5 class="reserve__legend-subtitle">Примечание</h5>
+  
+              <div class="reserve__legend-note-item">
+                <div class="reserve__legend-circles-group">
+                  <div class="reserve__legend-circle reserve__legend-circle--red-empty"></div>
+                  <div class="reserve__legend-circle reserve__legend-circle--black-empty"></div>
+                </div>
+                <span class="reserve__legend-note-text">доступные места</span>
+              </div>
+  
+              <div class="reserve__legend-note-item">
+                <div class="reserve__legend-circle reserve__legend-circle--gray-filled"></div>
+                <span class="reserve__legend-note-text">забронировано</span>
+              </div>
+            </div>
           </div>
+
         </form>
       </article>
     </main>

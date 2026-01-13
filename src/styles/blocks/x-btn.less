@@ -1,0 +1,34 @@
+.x-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: @black; /* ← проверьте переменную */
+  transition: background-color 0.2s;
+  cursor: pointer;
+  
+  &:hover,
+  &:active {
+    background-color: @red_dark;
+  }
+  
+  &__icon {
+    margin: auto;
+    color: @white;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    
+    /* Для SVG */
+    fill: currentColor;
+    
+    path {
+      fill: currentColor;
+    }
+  }
+}

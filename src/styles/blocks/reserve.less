@@ -15,15 +15,320 @@
         grid-area: order;
     }
     
-    &__scheme {
-        grid-area: scheme;
+    &__check-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 10px;
+        row-gap: 10px;
     }
     
-    // Дочерние элементы
+    &__label {
+        margin-left: 15px !important;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    &__scheme {
+        grid-area: scheme;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &__stage-container {
+        margin-bottom: 40px;
+    }
+    
+    &__stage {
+        width: 162px;
+        height: 34px;
+        background: rgba(31, 30, 30, 1);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 14px;
+        font-family: @font1;
+        margin-left: 310px; 
+        margin-bottom: 40px;
+        margin-top: 30px;
+    }
+    
+    &__schema-img {
+        width: 780px;
+        height: 399px;
+        min-width: 780px;
+        max-width: none;
+    }
+    
+    &__title {
+        text-align: left;
+        margin-left: 0;
+        margin-bottom: 30px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+        
     & > div {
         box-sizing: border-box;
         padding: 10px;
-        background-color: coral;
+        background-color: transparent;
         text-align: center;
+    }
+    
+    &__check-item {        
+        &--red {
+            .check__mark {
+                border-color: @red_dark !important;
+            }
+            
+            .check__input:checked ~ .check__mark {
+                background-color: @red_dark !important;
+            }
+            
+            .check__label {
+                color: @red_dark !important;
+            }
+        }
+        
+        &--black {
+            .check__mark {
+                border-color: @black !important;
+            }
+            
+            .check__input:checked ~ .check__mark {
+                background-color: @black !important;
+            }
+            
+            .check__label {
+                color: @black !important;
+            }
+        }
+        
+        &--gray {
+            .check__mark {
+                border-color: #999 !important;
+            }
+            
+            .check__input:checked ~ .check__mark {
+                background-color: #999 !important;
+            }
+            
+            .check__label {
+                color: #999 !important;
+            }
+        }
+    }
+    
+    &__order {
+        padding: 24px;
+        background: #f9f9f9;
+        border-radius: 12px;
+    }
+    
+    &__order-heading {
+        margin: 0 0 20px 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgba(31, 30, 30, 1);
+        text-align: left; 
+        margin-top: 70px;
+    }
+
+    &__order-list {
+        margin-bottom: 24px;
+    }
+
+    &__order-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+    }
+
+    &__order-line:last-of-type {
+        border-bottom: none;
+    }
+
+    &__order-details {
+        color: rgba(31, 30, 30, 1);
+        font-size: 16px;
+    }
+
+    &__order-sum {
+        font-weight: 600;
+        color: rgba(31, 30, 30, 1);
+        font-size: 18px;
+    }
+
+    &__order-total {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        padding: 16px 0;
+        margin-top: 16px;
+        border-top: 2px solid #ddd;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__order-center-total {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 0;
+        margin-top: 16px;
+        border-top: 2px solid #ddd;
+        font-size: 20px;
+        font-weight: 600;
+        gap: 10px;
+    }
+
+    &__order-btn {
+        width: 100%;
+        padding: 16px;
+        background: @red;
+        color: white;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    &__order-btn:hover {
+        background: @red_dark;
+    }
+
+    &__legend {
+        grid-area: legend;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__legend-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: rgba(31, 30, 30, 1);
+        margin-bottom: 30px;
+        margin-top: 70px;
+        text-align: right;
+        width: 100%;
+    }
+
+    &__legend-items {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    &__legend-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    &__legend-square {
+        width: 24px;
+        height: 24px;
+        display: block;
+        flex-shrink: 0;
+        order: 2;
+    }
+
+    &__legend-text {
+        font-size: 16px;
+        color: rgba(31, 30, 30, 1);
+        order: 1;
+        text-align: right;
+    }
+
+    &__legend-square--red {
+        background-color: @red; 
+    }
+
+    &__legend-square--black {
+        background-color: rgba(31, 30, 30, 1);
+    }
+
+    &__legend-notes {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    &__legend-subtitle {
+        font-size: 18px;
+        font-weight: 600;
+        color: rgba(31, 30, 30, 1);
+        margin-bottom: 15px;
+        text-align: right;
+        width: 100%;
+    }
+
+    &__legend-note-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: flex-end;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    &__legend-circles-group {
+        position: relative;
+        width: 36px;
+        height: 24px;
+    }
+
+    &__legend-circle {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+    }
+
+    &__legend-circle--red-empty {
+        border: 2px solid @red;
+        background-color: transparent;
+        left: 0;
+        z-index: 1;
+    }
+
+    &__legend-circle--black-empty {
+        border: 2px solid rgba(31, 30, 30, 1);
+        background-color: transparent;
+        left: 12px;
+        z-index: 2;
+    }
+
+    &__legend-circle--gray-filled {
+        background-color: rgba(191, 191, 191, 1);
+        border: 2px solid rgba(191, 191, 191, 1);
+        position: static;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: block;
+    }
+
+    &__legend-note-text {
+        font-size: 14px;
+        color: rgba(31, 30, 30, 1);
     }
 }
