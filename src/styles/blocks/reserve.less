@@ -1,18 +1,40 @@
 .reserve {
     display: grid;
     gap: 65px 11%;
-    grid-template-columns: 405px calc(89% - 405px);
+    grid-template-columns: 405px 1fr;
     grid-template-areas: 
         "checks scheme"
         "order legend";
     width: 100%;
     
-    &__checks {
-        grid-area: checks;
+    @media @bw1340 {
+        gap: 65px 6.5%;
+        grid-template-columns: 240px calc(93.5% - 240px);
     }
     
-    &__order {
-        grid-area: order;
+    @media @bw1020 {  
+        gap: 60px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "scheme scheme"
+        "checks legend"
+        "checks order";
+    }
+    
+    @media @bw768 {
+        gap: 60px;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "scheme"
+        "legend"
+        "checks"
+        "order";
+    }
+     &__checks {
+        grid-area: checks;
+        display: flex;
+        flex-direction: column;
+        
     }
     
     &__check-grid {
@@ -21,66 +43,18 @@
         gap: 15px;
         margin-bottom: 10px;
         row-gap: 10px;
-    }
-    
-    &__label {
-        margin-left: 15px !important;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 22px;
-    }
-    
-    &__scheme {
-        grid-area: scheme;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    &__stage-container {
-        margin-bottom: 40px;
-    }
-    
-    &__stage {
-        width: 162px;
-        height: 34px;
-        background: rgba(31, 30, 30, 1);
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 500;
-        font-size: 14px;
-        font-family: @font1;
-        margin-left: 310px; 
-        margin-bottom: 40px;
-        margin-top: 30px;
-    }
-    
-    &__schema-img {
-        width: 780px;
-        height: 399px;
-        min-width: 780px;
-        max-width: none;
-    }
-    
-    &__title {
-        text-align: left;
-        margin-left: 0;
-        margin-bottom: 30px;
-        font-weight: bold;
-        font-size: 18px;
-    }
         
-    & > div {
-        box-sizing: border-box;
-        padding: 10px;
-        background-color: transparent;
-        text-align: center;
+        
+        flex-direction: column !important;
     }
     
-    &__check-item {        
+    &__check-item {
+        display: flex;
+        align-items: center;
+        
+        // Если нужно чтобы чекбокс и текст были в строке
+        flex-direction: row;
+        
         &--red {
             .check__mark {
                 border-color: @red_dark !important;
@@ -123,12 +97,115 @@
             }
         }
     }
+    &__scheme {
+        grid-area: scheme;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        @media @bw1020 {
+            align-items: center;
+        } 
+    }
     
+    &__stage-container {
+        margin-bottom: 40px;
+        width: 100%;
+        max-width: 780px; 
+        display: flex;
+        justify-content: center;
+        
+        @media @bw1660 {
+            max-width: 700px;
+        }
+        
+        @media @bw1340 {
+            max-width: 600px;
+        }
+        
+        @media @bw1020 {
+            max-width: 500px;
+        }
+        
+        @media @bw768 {
+            max-width: 100%;
+            padding: 0 10px;
+        }
+    }
+    
+    &__stage {
+        width: 162px;
+        height: 34px;
+        background: rgba(31, 30, 30, 1);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 14px;
+        font-family: @font1;
+        margin: 30px auto 40px; 
+        
+        @media @bw1340 {
+            width: 140px;
+        }
+        
+        @media @bw768 {
+            width: 120px;
+            height: 30px;
+            font-size: 12px;
+        }
+    }
+    
+    &__schema-img {
+        width: 100%;
+        height: auto;
+        max-width: 780px;
+        display: block;
+        margin-right: 20px;
+        
+        @media @bw1660 {
+            max-width: 700px;
+        }
+        
+        @media @bw1340 {
+            max-width: 600px;
+        }
+        
+        @media @bw1020 {
+            max-width: 600px;
+        }
+        
+        @media @bw768 {
+            max-width: 100%;
+            padding: 0 10px;
+        }
+    }
+    
+    &__title {
+        text-align: left;
+        margin: 30px 0 20px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+        
+    & > div {
+        box-sizing: border-box;
+        padding: 10px;
+        background-color: transparent;
+        text-align: center;
+    }
+        
     &__order {
         padding: 24px;
         background: #f9f9f9;
         border-radius: 12px;
+        @media @bw1660 {
+            margin-right: 20px;
+        }
     }
+    
     
     &__order-heading {
         margin: 0 0 20px 0;
@@ -136,7 +213,10 @@
         font-weight: bold;
         color: rgba(31, 30, 30, 1);
         text-align: left; 
-        margin-top: 70px;
+        margin-top: 30px;
+        @media @bw1660 {
+            white-space: nowrap;
+        }
     }
 
     &__order-list {
@@ -147,7 +227,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12px 0;
+        margin-bottom: 12px;
+
+        
+
     }
 
     &__order-line:last-of-type {
@@ -212,14 +295,18 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        @media @bw1660 {
+            margin-right: 25px;
+        }
+        
     }
 
     &__legend-title {
         font-size: 18px;
         font-weight: 700;
         color: rgba(31, 30, 30, 1);
-        margin-bottom: 30px;
-        margin-top: 70px;
+        margin-bottom: 20px;
+        margin-top: 30px;
         text-align: right;
         width: 100%;
     }
@@ -331,4 +418,35 @@
         font-size: 14px;
         color: rgba(31, 30, 30, 1);
     }
+    @media @bw768 {
+    .reserve__legend {
+        align-items: flex-start !important;
+        
+        .reserve__legend-title,
+        .reserve__legend-subtitle,
+        .reserve__legend-text,
+        .reserve__legend-note-text {
+            text-align: left !important;
+        }
+        
+        .reserve__legend-items,
+        .reserve__legend-notes {
+            align-items: flex-start !important;
+        }
+        
+        .reserve__legend-item,
+        .reserve__legend-note-item {
+            justify-content: flex-start !important;
+            flex-direction: row; // Квадрат слева, текст справа
+        }
+        
+        .reserve__legend-square {
+            order: 1 !important;
+        }
+        
+        .reserve__legend-text {
+            order: 2 !important;
+        }
+    }
+}
 }
