@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang = "ru">
-    @@include('blocks/head.html')
-    <body class="body">
-        @@include('blocks/page-header.html')
-        <main class="main">
-            <div class="events">
-                <section class = "listing events__listing">
-                    <h2 class="listing__title section-title">Мероприятия</h2>
+<!doctype html>
+<html lang="ru">
+  @@include('blocks/head.html')
+  <body class="body">
+    @@include('blocks/page-header.html')
+    <main class="main">
+      <div class="events">
+        <section class="listing events__listing">
+          <h2 class="listing__title section-title">Мероприятия</h2>
 
-                    <div class="listing__events-list">
-                        @@loop('blocks/event-card.html', [
+          <div class="listing__events-list">
+            <!-- prettier-ignore -->
+            @@loop('blocks/event-card.html', [
                             {
                                 "class": "listing__event-card",
                                 "img": "assets/images/events/Nirvana.jpg",
+                                "img_webp": "assets/images/events/Nirvana.webp",
                                 "alt": "Nirvana",
                                 "title": "Собираемся и слушаем альбом Nirvana. Nirvana",
                                 "description": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
@@ -22,6 +24,7 @@
                             {
                                 "class": "listing__event-card",
                                 "img": "assets/images/events/HowStuffWorks.jpg",
+                                "img_webp": "assets/images/events/HowStuffWorks.webp",
                                 "alt": "HowStuffWorks",
                                 "title": "Есть тема, нужно обсудить с HowStuffWorks",
                                 "description": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
@@ -31,6 +34,7 @@
                             {
                                 "class": "listing__event-card",
                                 "img": "assets/images/events/Sade.jpg",
+                                "img_webp": "assets/images/events/Sade.webp",
                                 "alt": "TheBestOfSade",
                                 "title": "Вечер | The Best of Sade",
                                 "description": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
@@ -40,6 +44,7 @@
                             {
                                 "class": "listing__event-card",
                                 "img": "assets/images/events/Exhibition.jpg",
+                                "img_webp": "assets/images/events/Exhibition.webp",
                                 "alt": "Exhibition",
                                 "title": "Выставка Малевича в Томске",
                                 "description": "Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.",
@@ -49,6 +54,7 @@
                             {
                                 "class": "listing__event-card",
                                 "img": "assets/images/events/Tatler.jpg",
+                                "img_webp": "assets/images/events/Tatler.webp",
                                 "alt": "Tatler",
                                 "title": "Мастер — класс по студийной съемке от Tatler",
                                 "description": "Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.",
@@ -58,6 +64,7 @@
                             {
                                 "class": "listing__event-card",
                                 "img": "assets/images/events/TheHatters.jpg",
+                                "img_webp": "assets/images/events/TheHatters.webp",
                                 "alt": "TheHatters",
                                 "title": "Повесилимся на славу на концерте The Hatters",
                                 "description": "Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко",
@@ -66,24 +73,27 @@
                             }
          
                         ])
-                    </div>
-                </section>
-                <section class="events__services">
-                    <h2 class="events__section-title section-title section-title--sub">
-                        Дополнительные услуги
-                    </h2>
+          </div>
+        </section>
+        <section class="events__services">
+          <h2 class="events__section-title section-title section-title--sub">
+            Дополнительные услуги
+          </h2>
 
-                    <p class="events__section-description">
-                        Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что 
-                        все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная 
-                        работа, результатом которой будет проведение вашего мероприятия на высшем уровне.
-                    </p>
+          <p class="events__section-description">
+            Перед запуском проекта, мы подготавливаем подробную смету и
+            согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы
+            можем приступать к реализациии проекта, начинается сложная, но
+            интересная работа, результатом которой будет проведение вашего
+            мероприятия на высшем уровне.
+          </p>
 
-                    @@include('blocks/table.html')
-                </section>
-            </div>
-        </main>
-        @@include('blocks/page-footer.html')
-        @@include('blocks/event-pp.html')
-    </body>
+          @@include('blocks/table.html')
+        </section>
+      </div>
+    </main>
+    @@include('blocks/page-footer.html') @@include('blocks/event-pp.html')
+
+    <script src="scripts/main.min.js"></script>
+  </body>
 </html>

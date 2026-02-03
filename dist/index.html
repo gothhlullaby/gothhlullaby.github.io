@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <!--class="show-event-popup"-->
 
@@ -20,7 +20,6 @@
         <svg class="page-header__logo-icon" viewBox="0 0 202 147">
           <use xlink:href="assets/icons/symbols.svg#logo"></use>
         </svg>
-
       </a>
       <nav class="page-header__nav">
         <a class="page-header__nav-link" href="../events.html">Мероприятия</a>
@@ -29,9 +28,7 @@
         <a class="page-header__nav-link" href="#">Контакты</a>
 
         <div class="page-header__nav-user">
-          <a href="#" class="page-header__nav-user-link">
-            Александр С.
-          </a>
+          <a href="#" class="page-header__nav-user-link"> Александр С. </a>
           <a href="#" class="page-header__nav-logout">
             <svg class="page-header__nav-logout-icon" width="24" height="24">
               <use xlink:href="assets/icons/log-in.svg"></use>
@@ -48,9 +45,9 @@
         </a>
         <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
-
     </div>
   </header>
+
   <main class="main">
     <div class="home">
       <header class="main-header home__main-header">
@@ -60,11 +57,15 @@
 
       <section class="offers home__offers">
         <h4 class="offers__title">Я ХОЧУ:</h4>
+
         <div class="home__offers__btns">
-          <button class="offers__btn btn btn--red" type="button">Провести мероприятие</button>
+          <button class="offers__btn btn btn--red" type="button" id="js-eventOpenBtn">
+            Провести мероприятие
+          </button>
           <button class="offers__btn btn" type="button">Стать арендатором</button>
         </div>
       </section>
+
 
       <section class="about home__about">
         <h2 class="about__section-title section-title">О нас</h2>
@@ -72,9 +73,156 @@
       </section>
 
       <section class="upcoming home__upcoming">
-        <h2 class="upcoming__section-title section-title">Мероприятия</h2>
-        <div class="upcoming__container"></div>
+        <div class="upcoming__wrapper">
+          <div class="upcoming__container">
+            <h2 class="upcoming__title section-title">Мероприятия</h2>
+
+            <div class="upcoming__swiper swiper swiper--3s js-swiper" data-swiper-pagination-bullets="5">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/events/Nirvana.jpg" class="event-card__img" alt="Nirvana" />
+                      </picture>
+
+                      <h4 class="event-card__title">
+                        Собираемся и слушаем альбом Nirvana. Nirvana
+                      </h4>
+
+                      <p class="event-card__description">
+                        Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.
+                      </p>
+
+                      <time datetime="2024-12-07T18:00" class="event-card__time">07.12.2024 | начало 18.00</time>
+                    </a>
+                  </article>
+                </div>
+                <!-- prettier-ignore -->
+                <div class="swiper-slide">
+                  <article class="event-card ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/events/HowStuffWorks.jpg" class="event-card__img" alt="HowStuffWorks" />
+                      </picture>
+
+                      <h4 class="event-card__title">
+                        Есть тема, нужно обсудить с HowStuffWorks
+                      </h4>
+
+                      <p class="event-card__description">
+                        Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.
+                      </p>
+
+                      <time datetime="2024-12-14T18:30" class="event-card__time">14.12.2024 | начало 18.30</time>
+                    </a>
+                  </article>
+                </div>
+                <!-- prettier-ignore -->
+                <div class="swiper-slide">
+                  <article class="event-card ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/events/Sade.jpg" class="event-card__img" alt="TheBestOfSade" />
+                      </picture>
+
+                      <h4 class="event-card__title">
+                        Вечер | The Best of Sade
+                      </h4>
+
+                      <p class="event-card__description">
+                        Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.
+                      </p>
+
+                      <time datetime="2024-12-16T20:00" class="event-card__time">16.12.2024 | начало 20.00</time>
+                    </a>
+                  </article>
+                </div>
+                <!-- prettier-ignore -->
+                <div class="swiper-slide">
+                  <article class="event-card ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/events/Exhibition.jpg" class="event-card__img" alt="Exhibition" />
+                      </picture>
+
+                      <h4 class="event-card__title">
+                        Выставка Малевича в Томске
+                      </h4>
+
+                      <p class="event-card__description">
+                        Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.
+                      </p>
+
+                      <time datetime="2024-12-23T20:00" class="event-card__time">23.12.2024 | начало 20.00</time>
+                    </a>
+                  </article>
+                </div>
+                <!-- prettier-ignore -->
+                <div class="swiper-slide">
+                  <article class="event-card ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/events/Tatler.jpg" class="event-card__img" alt="Tatler" />
+                      </picture>
+
+                      <h4 class="event-card__title">
+                        Мастер — класс по студийной съемке от Tatler
+                      </h4>
+
+                      <p class="event-card__description">
+                        Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.
+                      </p>
+
+                      <time datetime="2024-12-25T13:00" class="event-card__time">25.12.2024 | начало 13.00</time>
+                    </a>
+                  </article>
+                </div>
+                <!-- prettier-ignore -->
+                <div class="swiper-slide">
+                  <article class="event-card ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/events/TheHatters.jpg" class="event-card__img" alt="TheHatters" />
+                      </picture>
+
+                      <h4 class="event-card__title">
+                        Повесилимся на славу на концерте The Hatters
+                      </h4>
+
+                      <p class="event-card__description">
+                        Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко
+                      </p>
+
+                      <time datetime="2024-12-27T10:00" class="event-card__time">27.12.2024 | начало 10.00</time>
+                    </a>
+                  </article>
+                </div>
+              </div>
+
+              <footer class="swiper-footer">
+                <button type="button" class="swiper-arrow-prev arrow arrow--left">
+                  <svg class="arrow__icon" width="91" height="60">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+
+                <div class="swiper-pagination"></div>
+                <button type="button" class="swiper-arrow-next arrow">
+                  <svg class="arrow__icon" width="91" height="60">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </footer>
+            </div>
+
+            <a href="#" class="upcoming__link link">Смотреть все</a>
+          </div>
+        </div>
       </section>
+
+      <!--идет после блока about-->
 
       <!-- prettier-ignore -->
       <section class="listing home__listing">
@@ -187,12 +335,58 @@
       </section>
 
       <section class="contacts home__contacts">
-        <h2 class="contacts__section-title section-title">Контакты</h2>
-        <div class="contacts__container"></div>
+        <div class="contacts__container">
+          <h2 class="contacts__title section-title">Контакты</h2>
+          <div class="contacts__blocks">
+            <div class="contacts__info">
+              <div class="contacts__location">
+                <svg class="contacts__icon" width="110" height="110">
+                  <use xlink:href="assets/icons/location.svg"></use>
+                </svg>
+                <div class="contacts__text">
+                  <h3 class="contacts__name">Томск, Красноармейская 146</h3>
+                  <p class="contacts__content">2 этаж
+                    <br />оф. 206
+                  </p>
+                </div>
+              </div>
+              <div class="contacts__home">
+                <svg class="contacts__icon" width="110" height="110">
+                  <use xlink:href="assets/icons/home.svg"></use>
+                </svg>
+                <div class="contacts__text">
+                  <h3 class="contacts__name">Отдел аренды</h3>
+                  <p class="contacts__content">
+                    <a href="tel:+73822907256">8 (3822) 90-72-56</a>
+                    <br />
+                    <a href="mailto:idat@tusur.ru">idat@tusur.ru</a>
+                  </p>
+                </div>
+              </div>
+              <div class="contacts__star">
+                <svg class="contacts__icon" width="110" height="110">
+                  <use xlink:href="assets/icons/star.svg"></use>
+                </svg>
+                <div class="contacts__text">
+                  <h3 class="contacts__name">Отдел мероприятий</h3>
+                  <p class="contacts__content">
+                    <a href="tel:+73822907256">8 (3822) 90-72-56</a>
+                    <br />
+                    <a href="mailto:idat@tusur.ru">idat@tusur.ru</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__wrapper">
+              <div class="contacts__map" id="js-contactsMap"></div>
+            </div>
+          </div>
+        </div>
       </section>
-      <div class="doit"></div>
+
     </div>
   </main>
+
   <footer class="page-footer">
     <nav class="page-footer__nav">
       <a class="page-footer__nav-link" href="#">Календарь мероприятий</a>
@@ -202,12 +396,13 @@
       <a class="page-footer__nav-link" href="#">Контакты</a>
     </nav>
   </footer>
-  <div class="pp" id="eventPP">
+  <div class="pp" id="js-eventPP">
+    <!--id="js-eventPP"-->
     <div class="pp__wrapper">
       <div class="pp__sticky-close">
-        <button class="pp__x-btn x-btn">
-          <svg class="x-btn__icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.40864 5.99915L11.7045 1.71268C11.8926 1.52453 11.9983 1.26935 11.9983 1.00326C11.9983 0.737183 11.8926 0.481998 11.7045 0.29385C11.5164 0.105701 11.2612 0 10.9952 0C10.7291 0 10.474 0.105701 10.2859 0.29385L6 4.59031L1.71414 0.29385C1.52602 0.105701 1.27087 -1.98247e-09 1.00483 0C0.738783 1.98247e-09 0.483635 0.105701 0.295513 0.29385C0.107391 0.481998 0.00170495 0.737183 0.00170495 1.00326C0.00170495 1.26935 0.107391 1.52453 0.295513 1.71268L4.59136 5.99915L0.295513 10.2856C0.201875 10.3785 0.127553 10.489 0.0768329 10.6108C0.0261132 10.7325 0 10.8631 0 10.995C0 11.1269 0.0261132 11.2575 0.0768329 11.3793C0.127553 11.501 0.201875 11.6116 0.295513 11.7044C0.388386 11.7981 0.49888 11.8724 0.620622 11.9232C0.742363 11.9739 0.872943 12 1.00483 12C1.13671 12 1.26729 11.9739 1.38903 11.9232C1.51077 11.8724 1.62127 11.7981 1.71414 11.7044L6 7.40799L10.2859 11.7044C10.3787 11.7981 10.4892 11.8724 10.611 11.9232C10.7327 11.9739 10.8633 12 10.9952 12C11.1271 12 11.2576 11.9739 11.3794 11.9232C11.5011 11.8724 11.6116 11.7981 11.7045 11.7044C11.7981 11.6116 11.8724 11.501 11.9232 11.3793C11.9739 11.2575 12 11.1269 12 10.995C12 10.8631 11.9739 10.7325 11.9232 10.6108C11.8724 10.489 11.7981 10.3785 11.7045 10.2856L7.40864 5.99915Z" fill="white" />
+        <button class="pp__x-btn x-btn js-ppCloseBtn" title="Закрыть" type="button">
+          <svg class="x-btn__icon" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#fi_x"></use>
           </svg>
         </button>
       </div>
@@ -320,7 +515,7 @@
               Отправить
             </button>
 
-            <button type="button" class="form__close-btn">
+            <button type="button" class="form__close-btn js-ppCloseBtn">
               Закрыть
             </button>
           </div>
@@ -328,6 +523,11 @@
       </div>
     </div>
   </div>
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+  <script src="scripts/swiper.min.js"></script>
+  <script src="scripts/main.min.js"></script>
 </body>
 
 </html>
