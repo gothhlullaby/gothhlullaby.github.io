@@ -1,0 +1,77 @@
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  min-width: 405px;
+  &__title {
+    margin: 0 0 14px;
+    font-family: @font1;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.375;
+    color: @black;
+    white-space: nowrap;
+    @media @bw1340 {
+      font-size: 14px;
+      line-height: 1.357;
+      font-weight: 600;
+    }
+    @media @bw768 {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.38;
+      font-weight: 600;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    margin-bottom: 15px;
+    width: 100%;
+    min-width: 405px;
+    @media @bw768 {
+      min-width: 0;
+      margin-left: -20px;
+      width: 100vw;
+    }
+  }
+  &__field-wrapper {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+  }
+  &__input {
+    width: 100%;
+    height: 49px;
+    padding: 0 0 0 28px;
+    font-family: @font1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: rgba(108, 108, 108, 1);
+    border: none;
+  }
+  &__submit {
+    min-width: 135px;
+    height: 49px;
+    padding: 15px 23px;
+    border: none;
+    background-color: @black;
+    color: @white;
+    font-family: @font1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: @red;
+    }
+    @media @bw768 {
+      min-width: 0;
+    }
+  }
+  span.error {
+    color: @red;
+    margin: 0 8px 5px;
+  }
+}

@@ -1,16 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-  <title>LENNI</title>
-  <link rel="stylesheet" href="styles/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Lenni Art</title>
+  <meta name="description" content="Арт—пространство для людей, горящих сердец и делом" />
+
+  <meta name="keywords" content="Lenni Art, пространство, мероприятия" />
+
+  <meta property="og:title" content="Lenni Art" />
+  <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом" />
+  <meta property="og:image" content="/assets/images/lenni-art.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lenni-art.ru/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossoriginn />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@400,500;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.min.css" />
+
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/assets/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
+
+  <meta name="msapplication-TileColor" content="#dedede" />
+  <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png" />
+  <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml" />
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#bc3324" />
+
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png" />
+
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png" />
+  <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+
+  <meta name="apple-mobile-web-app-title" content="Lenni Art" />
+  <meta name="application-name" content="Lenni Art" />
+
+  <meta name="theme-color" content="#dedede" />
 </head>
+
 
 <body class="body">
   <header class="page-header">
@@ -49,8 +83,52 @@
 
 
   <main class="main">
+    <div class="navigation">
+      Главная / Мероприятия / Вечер | The Best of Sade
+    </div>
+
+    <h1 class="page-title">Вечер | The Best of Sade</h1>
 
     <article class="event">
+      <div class="event__image-container">
+        <!-- Контейнер для картинки и надписей -->
+        <div class="event__image-wrapper">
+          <!-- Левая колонка надписей -->
+          <div class="event__labels event__labels--left">
+            <div class="event__label event__label--top-left">16/12/2024</div>
+            <div class="event__label event__label--bottom-left">
+              Кафе «Птичка»
+            </div>
+          </div>
+
+          <!-- Центральная картинка -->
+          <div class="event__image-center">
+            <article class="event-info ">
+              <picture class="event-info__picture">
+                <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/event/sade_detail_phone.webp" />
+                <source media="(max-width: 767px)" srcset="assets/images/event/sade_detail_phone.jpg" />
+                <source type="image/webp" media="(max-width: 1339px)" srcset="assets/images/event/sade_detail_tablet.webp" />
+                <source media="(max-width: 1339px)" srcset="assets/images/event/sade_detail_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/event/sade_detail.webp" />
+                <img src="assets/images/event/sade_detail.jpg" class="event-info__img" alt="TheBestOfSade" />
+              </picture>
+            </article>
+
+          </div>
+
+          <!-- Правая колонка надписей -->
+          <div class="event__labels event__labels--right">
+            <div class="event__label event__label--top-right">
+              <span class="event__label-time">20.00</span>
+              <span class="event__label-text">начало</span>
+            </div>
+            <div class="event__label event__label--bottom-right">
+              Ленина 10 | 2 этаж
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="event__content content">
         <h5>Программа мероприятия</h5>
         <ul>
@@ -64,9 +142,18 @@
           <li>23:00 — Завершение вечера</li>
         </ul>
         <h5>The Best Of Sade</h5>
-        <p>Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые популярные хиты группы, раритеты и их любимые треки.</p>
+        <p>
+          Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9
+          треков, включая самые популярные хиты группы, раритеты и их любимые
+          треки.
+        </p>
 
-        <p>Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры. Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав более 2 миллионов копий в Европе.</p>
+        <p>
+          Группа продемонстрировала необычайное долголетие и креативность
+          своей творческой карьеры. Она лидировала музыкальных чартах с 1994
+          по 1995 год, став четырехкратно платиновой в США и продав более 2
+          миллионов копий в Европе.
+        </p>
         <ol>
           <li>Your Love Is King</li>
           <li>On To Your Love</li>
@@ -145,7 +232,7 @@
         <div class="reserve__scheme">
           <div class="reserve__schema-container">
             <div class="reserve__stage">Сцена</div>
-            <img src="assets/images/schema.svg" alt="Схема расположения столов" class="reserve__schema-img">
+            <img src="assets/images/schema.svg" alt="Схема расположения столов" class="reserve__schema-img" />
           </div>
         </div>
 
@@ -172,7 +259,9 @@
         </div>
 
         <div class="reserve__legend">
-          <h4 class="reserve__legend-title">Стоимость пригласительного билета</h4>
+          <h4 class="reserve__legend-title">
+            Стоимость пригласительного билета
+          </h4>
 
           <div class="reserve__legend-items">
             <div class="reserve__legend-item">
@@ -203,23 +292,102 @@
             </div>
           </div>
         </div>
-
       </form>
     </article>
   </main>
 
   <footer class="page-footer">
-    <nav class="page-footer__nav">
-      <a class="page-footer__nav-link" href="#">Календарь мероприятий</a>
-      <a class="page-footer__nav-link" href="#">Провести мероприятие</a>
-      <a class="page-footer__nav-link" href="#">Стать арендатором</a>
-      <a class="page-footer__nav-link" href="#">Наши проекты</a>
-      <a class="page-footer__nav-link" href="#">Контакты</a>
-    </nav>
+    <div class="page-footer__main">
+      <div class="page-footer__line"></div>
+      <div class="page-footer__line page-footer__line--rotate"></div>
+    </div>
+    <div class="page-footer__body">
+      <div class="page-footer__content">
+        <div class="page-footer__column">
+          <nav class="page-footer__nav">
+            <ul class="page-footer__links">
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Календарь мероприятий</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Провести мероприятие</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Стать арендатором</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Наши проекты</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+          <h4 class="subscribe-form__title">
+            Подпишись и будь в курсе происходящего
+          </h4>
+
+          <div class="subscribe-form__wrapper">
+            <div class="subscribe-form__field-wrapper">
+              <input type="email" name="email" placeholder="Email" class="subscribe-form__input" required id="js-subscribeEmail" />
+            </div>
+
+            <button type="submit" class="subscribe-form__submit">
+              Подписаться
+            </button>
+          </div>
+
+          <label class="subscribe-form__check check">
+            <input type="checkbox" name="agree" class="check__input" required checked />
+            <span class="check__mark"></span>
+            <span class="check__label check__label--s">
+              Согласен на обработку персональных данных
+            </span>
+          </label>
+        </form>
+      </div>
+
+      <div class="page-footer__info">
+        <div class="page-footer__copyright">
+          <p class="page-footer__Millennials">© Millennials 2025</p>
+          <div class="page-footer__legal">
+            <a href="#" class="page-footer__link">Политика конфиденциальности</a>
+            <a href="#" class="page-footer__link">Cookies</a>
+          </div>
+        </div>
+        <div class="page-footer__socials">
+          <a href="#" class="page-footer__icon">
+            <svg width="58" height="58">
+              <use xlink:href="assets/icons/symbols.svg#vk1"></use>
+            </svg>
+          </a>
+
+          <a href="#" class="page-footer__icon">
+            <svg width="58" height="58">
+              <use xlink:href="assets/icons/symbols.svg#vk1"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="page-footer__dignity">
+          <a href="#" class="page-footer__dignity--link">
+            <span>Создание и продвижение</span>
+            <img src="assets/icons/dignity.svg" alt="Иконка достоинства" />
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <script src="scripts/main.min.js"></script>
 
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+
+  <script src="scripts/jquery.validate.js"></script>
+  <script src="scripts/jquery.validate-init.js"></script>
+
+  <script src="scripts/main.min.js"></script>
 </body>
 
 </html>
