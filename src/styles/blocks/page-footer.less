@@ -4,6 +4,7 @@
   padding-bottom: 75px;
   display: flex;
   flex-direction: column;
+
   &__main {
     display: flex;
     align-items: center;
@@ -20,6 +21,7 @@
       gap: 20px;
     }
   }
+
   &__body {
     position: relative;
     display: flex;
@@ -61,10 +63,12 @@
       transform: scaleX(-1);
     }
   }
+
   &__column {
     display: flex;
     flex-direction: column;
   }
+
   &__links {
     list-style: none;
     margin: 0;
@@ -82,12 +86,14 @@
       background-color: @red;
     }
   }
+
   &__item {
     padding-left: 22px;
     &:not(:last-child) {
       margin-bottom: 22px;
     }
   }
+
   &__link {
     display: inline-block;
     color: @black;
@@ -106,6 +112,7 @@
       line-height: 1.357;
     }
   }
+
   &__Millennials {
     margin: 60px 0 20px;
     color: @black;
@@ -127,6 +134,7 @@
       text-align: end;
     }
   }
+
   &__legal {
     display: flex;
     gap: 60px;
@@ -135,6 +143,7 @@
       flex-direction: column;
     }
   }
+
   &__socials {
     bottom: 0;
     transform: translateX(-50%);
@@ -152,11 +161,46 @@
       top: 59px;
     }
   }
+
+  &__social-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: @black; // или другой цвет фона
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken(@red, 10%); // затемнение при наведении
+    }
+
+    @media @bw768 {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
   &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+
+    @media @bw768 {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__social-icon {
     width: 100%;
     height: 100%;
-    max-height: 58px;
+    object-fit: contain;
   }
+
   &__dignity {
     margin-top: auto;
     margin-bottom: -7.75px;
@@ -196,6 +240,7 @@
       pointer-events: none;
     }
   }
+
   &__info {
     display: flex;
     width: 100%;
@@ -206,20 +251,13 @@
       flex-direction: column;
     }
   }
+
   &__copyright {
     @media @bw768 {
       display: flex;
       flex-direction: column-reverse;
       width: 100%;
       margin-top: 157px;
-    }
-  }
-  .check__label--s {
-    /* Базовый размер для мобильных */
-    font-size: 14px;
-
-    @media @bw768 {
-      font-size: 13px; /* Еще меньше на очень маленьких экранах */
     }
   }
 }

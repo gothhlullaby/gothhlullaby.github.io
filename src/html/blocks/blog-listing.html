@@ -1,12 +1,12 @@
 <section class="listing @@class">
-    <h2 class="section-title listing__title">
-        Блог
-    </h2>
-    <div class="listing__article-list">
-        <!-- prettier-ignore -->
-        @@loop('article-card.html',
+  <h2 class="section-title listing__title">Блог</h2>
+  <div class="listing__article-list">
+    <!-- prettier-ignore -->
+    @@loop('article-card.html',
         [
         {
+            "img_phone": "/assets/images/blog/theatre-phone.jpg",
+            "img_phone_webp": "/assets/images/blog/theatre-phone.webp",
             "class": "listing__article-card",
             "img": "assets/images/blog/theatre.jpg",
             "img_webp": "assets/images/blog/theatre.webp",
@@ -19,6 +19,8 @@
             "datetime": "2021-11-26T00:00"
         },
         {
+            "img_phone": "/assets/images/blog/VR-phone.jpg",
+            "img_phone_webp": "/assets/images/blog/VR-phone.webp",
             "class": "listing__article-card",
             "img": "assets/images/blog/VR.jpg",
             "img_webp": "assets/images/blog/VR.webp",
@@ -31,6 +33,8 @@
             "datetime": "2024-11-05T00:00"
         },
         {
+            "img_phone": "/assets/images/blog/radio-phone.jpg",
+            "img_phone_webp": "/assets/images/blog/radio-phone.webp",
             "class": "listing__article-card",
             "img": "assets/images/blog/radio.jpg",
             "img_webp": "assets/images/blog/radio.webp",
@@ -43,6 +47,6 @@
             "datetime": "2024-11-05T00:00"
         }
         ])
-    </div>
-    <a href="#" class="listing__link link">Смотреть все</a>
+  </div>
+  <a href="#" class="listing__link link">Смотреть все</a>
 </section>

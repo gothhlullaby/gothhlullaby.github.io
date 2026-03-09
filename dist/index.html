@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="ru">
-<!--class="show-event-popup"-->
 
 <head>
   <meta charset="UTF-8" />
@@ -83,25 +82,25 @@
 
   <main class="main">
     <div class="home">
-      <header class="main__header home__main-header">
+      <header class="main-header home__main-header">
         <h1 class="main-header__title1">АРТ — ПРОСТРАНСТВО</h1>
-        <img src="assets/icons/LENNI.svg" />
+        <img src="assets/icons/LENNI.svg" class="main-header__icon" />
         <p class="main-header__title2">
           ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
           <br />МЕСТО ДЛЯ НАСТОЯЩЕГО
         </p>
-        <header></header>
       </header>
 
-      <!-- prettier-ignore -->
       <section class="offers home__offers">
-        <h4 class="offers__title">Я ХОЧУ:</h4>
+        <h4 class="home__offers__title">Я ХОЧУ:</h4>
 
         <div class="home__offers__btns">
-          <button class="offers__btn btn btn--red" type="button" id="js-eventOpenBtn">
+          <button class="home__offers__btn btn btn--red" type="button" id="js-eventOpenBtn">
             Провести мероприятие
           </button>
-          <button class="offers__btn btn" type="button">Стать арендатором</button>
+          <button class="home__offers__btn btn" type="button">
+            Стать арендатором
+          </button>
         </div>
       </section>
 
@@ -154,7 +153,7 @@
           </div>
         </div>
       </section>
-      , <section class="upcoming home__upcoming">
+      <section class="upcoming home__upcoming">
         <div class="upcoming__wrapper">
           <div class="upcoming__container">
             <h2 class="upcoming__title section-title">Мероприятия</h2>
@@ -303,17 +302,15 @@
           </div>
         </div>
       </section>
-
-      <!-- prettier-ignore -->
       <section class="listing home__listing">
-        <h2 class="section-title listing__title">
-          Блог
-        </h2>
+        <h2 class="section-title listing__title">Блог</h2>
         <div class="listing__article-list">
           <!-- prettier-ignore -->
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
+                <source type="image/webp" media="(max-width: 320px)" srcset="/assets/images/blog/theatre-phone.webp" />
+                <source media="(max-width: 320px)" srcset="/assets/images/blog/theatre-phone.jpg" />
 
                 <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/blog/theatre.webp" />
                 <source media="(max-width: 450px)" srcset="assets/images/blog/theatre.jpg" />
@@ -326,27 +323,22 @@
               </picture>
             </a>
             <div class="article-card__info">
-              <time datetime="2021-11-26T00:00" class="article-card__time">
-                26.11.2021
-              </time>
+              <time datetime="2021-11-26T00:00" class="article-card__time"> 26.11.2021 </time>
+
               <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">
-                  Фотосессия в стенах Театра драмы
-                </h4>
-                <span class="article-card__arrow">
-                  <svg class="arrow__icon" width="91" height="60">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </span>
+                <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
+                <svg class="article-card__arrow arrow" width="91" height="60">
+                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                </svg>
               </a>
-              <p class="article-card__description">
-                Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было
-              </p>
+              <p class="article-card__description">Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было</p>
             </div>
           </article>
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
+                <source type="image/webp" media="(max-width: 320px)" srcset="/assets/images/blog/VR-phone.webp" />
+                <source media="(max-width: 320px)" srcset="/assets/images/blog/VR-phone.jpg" />
 
                 <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/blog/VR.webp" />
                 <source media="(max-width: 450px)" srcset="assets/images/blog/VR.jpg" />
@@ -359,27 +351,22 @@
               </picture>
             </a>
             <div class="article-card__info">
-              <time datetime="2024-11-05T00:00" class="article-card__time">
-                05.11.2024
-              </time>
+              <time datetime="2024-11-05T00:00" class="article-card__time"> 05.11.2024 </time>
+
               <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">
-                  Выставка VR в Томске
-                </h4>
-                <span class="article-card__arrow">
-                  <svg class="arrow__icon" width="91" height="60">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </span>
+                <h4 class="article-card__title">Выставка VR в Томске</h4>
+                <svg class="article-card__arrow arrow" width="91" height="60">
+                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                </svg>
               </a>
-              <p class="article-card__description">
-                Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.
-              </p>
+              <p class="article-card__description">Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
             </div>
           </article>
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
+                <source type="image/webp" media="(max-width: 320px)" srcset="/assets/images/blog/radio-phone.webp" />
+                <source media="(max-width: 320px)" srcset="/assets/images/blog/radio-phone.jpg" />
 
                 <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/blog/radio.webp" />
                 <source media="(max-width: 450px)" srcset="assets/images/blog/radio.jpg" />
@@ -392,24 +379,18 @@
               </picture>
             </a>
             <div class="article-card__info">
-              <time datetime="2024-11-05T00:00" class="article-card__time">
-                01.11.2024
-              </time>
+              <time datetime="2024-11-05T00:00" class="article-card__time"> 01.11.2024 </time>
+
               <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">
-                  Rocking radio в заброшенном ангаре
-                </h4>
-                <span class="article-card__arrow">
-                  <svg class="arrow__icon" width="91" height="60">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </span>
+                <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
+                <svg class="article-card__arrow arrow" width="91" height="60">
+                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                </svg>
               </a>
-              <p class="article-card__description">
-                15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.
-              </p>
+              <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
             </div>
           </article>
+
         </div>
         <a href="#" class="listing__link link">Смотреть все</a>
       </section>
@@ -419,9 +400,11 @@
           <div class="contacts__blocks">
             <div class="contacts__info">
               <div class="contacts__location">
-                <svg class="contacts__icon" width="110" height="110">
-                  <use xlink:href="assets/icons/location.svg"></use>
-                </svg>
+                <div class="contacts__square">
+                  <svg class="contacts__icon">
+                    <use xlink:href="assets/icons/location.svg"></use>
+                  </svg>
+                </div>
                 <div class="contacts__text">
                   <h3 class="contacts__name">Томск, Красноармейская 146</h3>
                   <p class="contacts__content">2 этаж
@@ -430,9 +413,11 @@
                 </div>
               </div>
               <div class="contacts__home">
-                <svg class="contacts__icon" width="110" height="110">
-                  <use xlink:href="assets/icons/home.svg"></use>
-                </svg>
+                <div class="contacts__square">
+                  <svg class="contacts__icon">
+                    <use xlink:href="assets/icons/home.svg"></use>
+                  </svg>
+                </div>
                 <div class="contacts__text">
                   <h3 class="contacts__name">Отдел аренды</h3>
                   <p class="contacts__content">
@@ -443,9 +428,11 @@
                 </div>
               </div>
               <div class="contacts__star">
-                <svg class="contacts__icon" width="110" height="110">
-                  <use xlink:href="assets/icons/star.svg"></use>
-                </svg>
+                <div class="contacts__square">
+                  <svg class="contacts__icon">
+                    <use xlink:href="assets/icons/star.svg"></use>
+                  </svg>
+                </div>
                 <div class="contacts__text">
                   <h3 class="contacts__name">Отдел мероприятий</h3>
                   <p class="contacts__content">
@@ -463,6 +450,16 @@
         </div>
       </section>
 
+
+      <div class="mak">
+        <div class="mak__row">
+          <div class="mak__row--first-line">
+            <div class="mak__text mak__text1">Просто делайте,</div>
+            <div class="mak__text mak__text2">что нравится,</div>
+          </div>
+          <div class="mak__text mak__text3">а мы вам поможем</div>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -471,6 +468,7 @@
       <div class="page-footer__line"></div>
       <div class="page-footer__line page-footer__line--rotate"></div>
     </div>
+
     <div class="page-footer__body">
       <div class="page-footer__content">
         <div class="page-footer__column">
@@ -528,19 +526,21 @@
             <a href="#" class="page-footer__link">Cookies</a>
           </div>
         </div>
+
         <div class="page-footer__socials">
-          <a href="#" class="page-footer__icon">
-            <svg width="58" height="58">
-              <use xlink:href="assets/icons/symbols.svg#vk1"></use>
-            </svg>
+          <a href="#" class="page-footer__social-circle">
+            <div class="page-footer__icon">
+              <img src="assets/icons/vk1.svg" alt="VK" class="page-footer__social-icon" width="24" height="24" />
+            </div>
           </a>
 
-          <a href="#" class="page-footer__icon">
-            <svg width="58" height="58">
-              <use xlink:href="assets/icons/symbols.svg#vk1"></use>
-            </svg>
+          <a href="#" class="page-footer__social-circle">
+            <div class="page-footer__icon">
+              <img src="assets/icons/vk1.svg" alt="VK" class="page-footer__social-icon" width="24" height="24" />
+            </div>
           </a>
         </div>
+
         <div class="page-footer__dignity">
           <a href="#" class="page-footer__dignity--link">
             <span>Создание и продвижение</span>
@@ -684,16 +684,12 @@
 
 
   <script src="scripts/jquery-3.7.1.min.js"></script>
-
   <script src="scripts/jquery.selectric.js"></script>
   <script src="scripts/jquery.mask.js"></script>
   <script src="scripts/air-datepicker.js"></script>
-
   <script src="https://maps.googleapis.com/maps/api/js?key="></script>
-
   <script src="scripts/jquery.validate.js"></script>
   <script src="scripts/jquery.validate-init.js"></script>
-
   <script src="scripts/swiper.min.js"></script>
   <script src="scripts/main.min.js"></script>
 </body>

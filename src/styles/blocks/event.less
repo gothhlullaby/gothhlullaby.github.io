@@ -1,23 +1,29 @@
 .event {
   max-width: 1566px;
   margin: 0 auto;
-  padding: 40px 0 150px;
+  padding: 0 0 150px;
 
   @media @bw1660, @bw1020 {
-    margin: 0 10px;
+    margin: 0 auto;
   }
 }
 
 .event__content {
   margin-left: 30px;
 
+  @media @bw1660 {
+    margin-top: 70px;
+  }
+  @media @bw1340 {
+    margin-top: 50px;
+  }
+  @media @bw768 {
+    margin-top: 40px;
+  }
+
   h5 {
     margin-top: 75px;
   }
-}
-
-.event__reserve {
-  padding: 0 20px;
 }
 
 .page-title {
@@ -26,111 +32,129 @@
     serif;
   letter-spacing: 0;
   text-align: center;
-  margin: 40px 0 60px;
+  margin: 0 60px;
   padding: 0 20px;
+
+  @media @bw1660 {
+    margin-bottom: 70px;
+  }
+  @media @bw1340 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  @media @bw768 {
+    margin-bottom: 1px;
+    font-size: 24px;
+    text-wrap: nowrap;
+  }
 }
 
 .navigation {
-  font: 400 16px @font1;
-  margin: 40px 0 40px 40px;
+  .container();
+  padding: 0 40px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 40px 0;
+  gap: 6px;
+  font-family: @font1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375;
+  color: @black;
+  @media @bw1340 {
+    padding: 0 30px;
+    font-size: 14px;
+    line-height: 1.357;
+  }
+  @media @bw768 {
+    display: none;
+  }
+  &__link {
+    color: @black;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    &:hover {
+      color: @red;
+    }
+  }
+  &__separator {
+    color: @black;
+  }
+  &__current {
+    color: @black;
+  }
 }
 
-/* Картинка */
 .event-info {
   &__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
   }
-
   &__picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     width: 100%;
-    max-width: 100%;
   }
-
   &__img {
     display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 40px 80px;
-  }
-}
-
-/* Контейнер с картинкой и надписями */
-.event__image {
-  &-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    max-width: 1566px;
-    margin: 0 auto;
-  }
-
-  &-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    height: auto;
   }
 }
 
-/* Надписи */
+.event__image-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  max-width: 1566px;
+  margin: 0 auto;
+}
+
+.event__labels--left {
+  grid-column: 1;
+  justify-self: end;
+  margin-right: 50px;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.event__labels--right {
+  grid-column: 3;
+  justify-self: start;
+  margin-left: 50px;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.event__image-center {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
 .event__labels {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  width: auto;
-  position: relative;
-
-  &--left {
-    align-items: flex-end;
-    text-align: right;
-    margin-right: 5px;
-  }
-
-  &--right {
-    align-items: flex-start;
-    text-align: left;
-    margin-left: 5px;
-  }
 }
 
 .event__label {
   margin: 8px 0;
-  padding: 0;
   white-space: nowrap;
   font-family: "Mak", sans-serif;
-  letter-spacing: 0;
 
   &--top-left,
   &--top-right .event__label-time {
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 22px;
+    font:
+      300 30px/22px "Mak",
+      sans-serif;
   }
 
   &--bottom-left,
   &--bottom-right {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 14px;
-  }
-
-  &--top-left,
-  &--top-right {
-    margin-bottom: 15px;
-  }
-
-  &--bottom-left,
-  &--bottom-right {
-    margin-top: 8px;
+    font:
+      700 24px/14px "Mak",
+      sans-serif;
   }
 }
 
@@ -138,7 +162,6 @@
   font:
     300 30px/22px "Mak",
     sans-serif;
-  letter-spacing: 0;
   display: inline-block;
   margin-right: 5px;
 }
@@ -147,41 +170,132 @@
   font:
     700 24px/14px "Mak",
     sans-serif;
-  letter-spacing: 0;
   display: inline-block;
 }
 
-/* Адаптивность */
+.event__label-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  width: 100%;
+
+  .event__label {
+    width: 100%;
+  }
+}
+
+.event__label-line {
+  display: block;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    to left,
+    rgba(28, 27, 27, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  margin: 8px 0;
+
+  &--rotate {
+    transform: scaleX(-1);
+  }
+}
+
+@media (max-width: 1340px) {
+  .event__labels--left {
+    margin-right: 30px;
+  }
+  .event__labels--right {
+    margin-left: 30px;
+  }
+  .event__label-line {
+    width: 120px;
+  }
+}
+
 @media (max-width: 1024px) {
   .event__image-wrapper {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .event__labels {
     flex-direction: row;
     justify-content: center;
+    gap: 30px;
     width: 100%;
-    margin: 10px 0;
-    gap: 20px;
-
-    &--left,
-    &--right {
-      align-items: center;
-      width: 100%;
-      margin: 0;
-      text-align: center;
-    }
   }
 
-  .event__label {
+  .event__labels--left,
+  .event__labels--right {
+    grid-column: 1;
+    justify-self: center;
     margin: 0;
-    text-align: center !important;
+    align-items: center;
+    text-align: center;
+  }
 
-    &--top-left,
-    &--top-right,
-    &--bottom-left,
-    &--bottom-right {
-      margin: 0;
-    }
+  .event__label-wrapper {
+    align-items: center;
+  }
+  .event__label {
+    text-align: center;
+  }
+  .event__label-line {
+    width: 100px;
+  }
+  .event__image-center {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .event__image-wrapper {
+    gap: 15px;
+  }
+
+  .event__labels {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .event__labels--left,
+  .event__labels--right {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .event__label-wrapper {
+    align-items: center;
+  }
+
+  .event__label--top-left,
+  .event__label--top-right .event__label-time {
+    font:
+      300 26px/20px "Mak",
+      sans-serif;
+  }
+
+  .event__label--bottom-left,
+  .event__label--bottom-right {
+    font:
+      700 20px/12px "Mak",
+      sans-serif;
+  }
+
+  .event__label-time {
+    font:
+      300 26px/20px "Mak",
+      sans-serif;
+  }
+  .event__label-text {
+    font:
+      700 20px/12px "Mak",
+      sans-serif;
+  }
+  .event__label-line {
+    width: 80px;
+    margin: 5px 0;
   }
 }

@@ -5,6 +5,11 @@
     @@include('blocks/page-header.html')
     <main class="main">
       <div class="events">
+        <nav class="navigation" aria-label="navigation">
+          <a href="/" class="navigation__link">Главная</a>
+          <span class="navigation__separator">/</span>
+          <span class="navigation__current">Мероприятия</span>
+        </nav>
         <section class="listing events__listing">
           <h2 class="listing__title section-title">Мероприятия</h2>
 
@@ -75,6 +80,18 @@
                         ])
           </div>
         </section>
+        <a href="#" class="more">
+          <p class="more__text">Показать ещё</p>
+          <span class="more__arrow">
+            <svg
+              class="more__arrow-icon more__icon arrow__icon--down"
+              width="91"
+              height="60"
+            >
+              <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+            </svg>
+          </span>
+        </a>
         <section class="events__services">
           <h2 class="events__section-title section-title section-title--sub">
             Дополнительные услуги
@@ -87,8 +104,10 @@
             интересная работа, результатом которой будет проведение вашего
             мероприятия на высшем уровне.
           </p>
-
+          <!-- prettier-ignore -->
           @@include('blocks/table.html')
+          @@include('blocks/offers.html', {"class": "home__offers"})
+          @@include('blocks/events-elem.html')
         </section>
       </div>
     </main>

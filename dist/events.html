@@ -82,6 +82,11 @@
 
   <main class="main">
     <div class="events">
+      <nav class="navigation" aria-label="navigation">
+        <a href="/" class="navigation__link">Главная</a>
+        <span class="navigation__separator">/</span>
+        <span class="navigation__current">Мероприятия</span>
+      </nav>
       <section class="listing events__listing">
         <h2 class="listing__title section-title">Мероприятия</h2>
 
@@ -191,6 +196,14 @@
           </article>
         </div>
       </section>
+      <a href="#" class="more">
+        <p class="more__text">Показать ещё</p>
+        <span class="more__arrow">
+          <svg class="more__arrow-icon more__icon arrow__icon--down" width="91" height="60">
+            <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+          </svg>
+        </span>
+      </a>
       <section class="events__services">
         <h2 class="events__section-title section-title section-title--sub">
           Дополнительные услуги
@@ -203,7 +216,7 @@
           интересная работа, результатом которой будет проведение вашего
           мероприятия на высшем уровне.
         </p>
-
+        <!-- prettier-ignore -->
         <table class="events__tariffs-table  table">
           <thead class="table__head">
             <tr class="table__head-tr">
@@ -318,6 +331,67 @@
             </tr>
           </tfoot>
         </table>
+        <section class="offers home__offers">
+          <h4 class="home__offers__title">Я ХОЧУ:</h4>
+
+          <div class="home__offers__btns">
+            <button class="home__offers__btn btn btn--red" type="button" id="js-eventOpenBtn">
+              Провести мероприятие
+            </button>
+            <button class="home__offers__btn btn" type="button">
+              Стать арендатором
+            </button>
+          </div>
+        </section>
+
+        <section class="events-elem @@class">
+          <div class="events-elem__container">
+            <div class="events-elem__blocks">
+              <div class="events-elem__information">
+                <div class="contacts__squre">
+                  <img src="assets/icons/information.svg" alt="Information" class="contacts__logo" width="110" height="110" />
+                </div>
+                <div class="events-elem__text">
+                  <h3 class="events-elem__name">Цены</h3>
+                  <p class="events-elem__content">
+                    Цены, указанные на сайте носят информационный характер. Мы
+                    придерживаемся индивидуального подхода в работе с клиентом.
+                  </p>
+                </div>
+              </div>
+
+              <div class="events-elem__contact">
+                <div class="contacts__squre">
+                  <img src="assets/icons/contact.svg" alt="Contact" class="contacts__logo" width="110" height="110" />
+                </div>
+                <div class="events-elem__text">
+                  <h3 class="events-elem__name">Контакты</h3>
+                  <p class="events-elem__content">
+                    Отдел организации мероприятий
+                    <br />
+                    <a href="tel:+73822907256">8 (3822) 90-72-56</a>
+                    <br />
+                    <a href="mailto:idat@tusur.ru">idat@tusur.ru</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="events-elem__handshake">
+                <div class="contacts__squre">
+                  <img src="assets/icons/handshake.svg" alt="Handshake" class="contacts__logo" width="110" height="110" />
+                </div>
+                <div class="events-elem__text">
+                  <h3 class="events-elem__name">Преимущество</h3>
+                  <p class="events-elem__content">
+                    Мы имеем все возможности для того, чтобы помочь как малому бизнесу и
+                    молодым талантам, так и большим корпорациям и холдингам.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </section>
     </div>
   </main>
@@ -326,6 +400,7 @@
       <div class="page-footer__line"></div>
       <div class="page-footer__line page-footer__line--rotate"></div>
     </div>
+
     <div class="page-footer__body">
       <div class="page-footer__content">
         <div class="page-footer__column">
@@ -383,19 +458,21 @@
             <a href="#" class="page-footer__link">Cookies</a>
           </div>
         </div>
+
         <div class="page-footer__socials">
-          <a href="#" class="page-footer__icon">
-            <svg width="58" height="58">
-              <use xlink:href="assets/icons/symbols.svg#vk1"></use>
-            </svg>
+          <a href="#" class="page-footer__social-circle">
+            <div class="page-footer__icon">
+              <img src="assets/icons/vk1.svg" alt="VK" class="page-footer__social-icon" width="24" height="24" />
+            </div>
           </a>
 
-          <a href="#" class="page-footer__icon">
-            <svg width="58" height="58">
-              <use xlink:href="assets/icons/symbols.svg#vk1"></use>
-            </svg>
+          <a href="#" class="page-footer__social-circle">
+            <div class="page-footer__icon">
+              <img src="assets/icons/vk1.svg" alt="VK" class="page-footer__social-icon" width="24" height="24" />
+            </div>
           </a>
         </div>
+
         <div class="page-footer__dignity">
           <a href="#" class="page-footer__dignity--link">
             <span>Создание и продвижение</span>
